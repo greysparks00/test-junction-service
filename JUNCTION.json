@@ -1,0 +1,14 @@
+{
+    "name": "test-service",
+    "version": 1,
+    "runtime": {
+        "install": ["uv", "sync", "--frozen"],
+        "command": ["uv", "run", "--no-sync", "relay"]
+    },
+    "routing": {
+        "prefix": "/relay"
+    },
+    "health": {
+        "path": "/health"
+    }
+}
