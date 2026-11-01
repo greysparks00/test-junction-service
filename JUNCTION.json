@@ -3,7 +3,7 @@
     "runtime": {
         "port": 8081,
         "install": ["uv", "sync"],
-        "command": ["uv", "run", "python", "main.py"]
+        "command": ["uv", "run", "python", "src/junction_test_service/main.py"]
     },
     "routing": {
         "prefix": "/test"
