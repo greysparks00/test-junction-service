@@ -1,9 +1,9 @@
+from fastapi import HTTPException
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/health")
 def health():
-    return {
-        "status": "healthy"
-    }
+    raise HTTPException(status_code=503, detail="Health check failed")
