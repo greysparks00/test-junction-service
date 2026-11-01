@@ -1,14 +1,9 @@
 {
     "name": "junction-test-service",
     "runtime": {
+        "port": 8081,
         "install": ["uv", "sync"],
-        "command": [
-        "uv", "run", "--no-sync",
-        "uvicorn", "junction_test_service.main:app",
-        "--app-dir", "src",
-        "--host", "127.0.0.1",
-        "--port", "8081"
-        ]
+        "command": ["uv", "run", "python", "main.py"]
     },
     "routing": {
         "prefix": "/test"
