@@ -14,5 +14,6 @@
     },
     "health": {
         "path": "/health"
-    }
+    },
+    "test": "value"
 }
