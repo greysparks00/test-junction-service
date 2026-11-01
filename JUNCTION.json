@@ -1,12 +1,16 @@
 {
-    "name": "test-service",
-    "version": 1,
+    "name": "junction-test-service",
     "runtime": {
-        "install": ["uv", "sync", "--frozen"],
-        "command": ["uv", "run", "--no-sync", "relay"]
+        "install": ["uv", "sync"],
+        "command": [
+        "uv", "run", "uvicorn",
+        "main:app",
+        "--host", "127.0.0.1",
+        "--port", "8081"
+        ]
     },
     "routing": {
-        "prefix": "/relay"
+        "prefix": "/test"
     },
     "health": {
         "path": "/health"
