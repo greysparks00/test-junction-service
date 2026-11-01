@@ -7,5 +7,6 @@ app = FastAPI()
 @app.get("/health")
 def health():
     return {
-        "status": "healthy"
+        "status": "healthy",
+        "version": "test update auto update test"
     }
